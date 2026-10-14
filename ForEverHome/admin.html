@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - FurEver Home</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <script>
+    if (localStorage.getItem("fureverAdminLoggedIn") !== "true") {
+        window.location.href = "admin-login.html";
+    }
+</script>
+
+<header>
+
+    <h1>🐾 FurEver Home Admin</h1>
+
+    <nav>
+
+        <nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="pets.html">Pets</a>
+
+    <a href="admin.html">Admin</a>
+
+    <a href="#" onclick="adminLogout()">Logout</a>
+
+</nav>
+
+    </nav>
+
+</header>
+
+
+<div class="admin-container">
+
+    <h2>👨‍💼 Admin Dashboard</h2>
+
+    <p class="admin-welcome">
+        Welcome, Admin!
+    </p>
+
+
+    <!-- SUMMARY -->
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <h3>🐶 Pets</h3>
+            <p id="petCount">3</p>
+        </div>
+
+
+        <div class="dashboard-card">
+            <h3>❤️ Applications</h3>
+            <p id="applicationCount">0</p>
+        </div>
+
+
+        <div class="dashboard-card">
+            <h3>🏠 Rehoming</h3>
+            <p id="rehomingCount">0</p>
+        </div>
+
+    </div>
+
+
+
+    <!-- PET LIST -->
+
+    <section class="admin-section">
+
+        <h2>🐾 Pet Listings</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Pet Name</th>
+
+                    <th>Type</th>
+
+                    <th>Breed</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="petTable">
+
+                <tr>
+
+                    <td>Max</td>
+
+                    <td>Dog</td>
+
+                    <td>Aspin</td>
+
+                    <td>
+                        <span class="status available">
+                            Available
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button
+                            onclick="deletePet(this)">
+                            Delete
+                        </button>
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Luna</td>
+
+                    <td>Cat</td>
+
+                    <td>Persian Mix</td>
+
+                    <td>
+                        <span class="status available">
+                            Available
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button
+                            onclick="deletePet(this)">
+                            Delete
+                        </button>
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Buddy</td>
+
+                    <td>Dog</td>
+
+                    <td>Mixed Breed</td>
+
+                    <td>
+                        <span class="status available">
+                            Available
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button
+                            onclick="deletePet(this)">
+                            Delete
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+
+    <!-- ADOPTION APPLICATIONS -->
+
+    <section class="admin-section">
+
+        <h2>❤️ Adoption Applications</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Applicant</th>
+
+                    <th>Pet</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+
+                    <td>Sample User</td>
+
+                    <td>Max</td>
+
+                    <td>
+                        <span class="status pending">
+                            Pending
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button
+                            onclick="approveApplication(this)">
+                            Approve
+                        </button>
+
+                        <button
+                            onclick="rejectApplication(this)">
+                            Reject
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+
+    <!-- REHOMING -->
+
+    <section class="admin-section">
+
+        <h2>🏠 Rehoming Requests</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Pet</th>
+
+                    <th>Owner</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+
+                    <td>Buddy</td>
+
+                    <td>Sample Owner</td>
+
+                    <td>
+                        <span class="status pending">
+                            Pending
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button
+                            onclick="approveRehome(this)">
+                            Approve
+                        </button>
+
+                        <button
+                            onclick="rejectRehome(this)">
+                            Reject
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

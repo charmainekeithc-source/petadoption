@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login - FurEver Home</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<header>
+
+    <h1>🐾 FurEver Home</h1>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="pets.html">Adopt</a>
+
+        <a href="rehome.html">Rehome</a>
+
+        <a href="login.html">Login</a>
+
+    </nav>
+
+</header>
+
+
+
+<div class="form-container">
+
+    <h2>🔐 Login</h2>
+
+
+    <form onsubmit="login(event)">
+
+
+        <label for="loginUsername">
+            Username
+        </label>
+
+        <input
+            type="text"
+            id="loginUsername"
+            placeholder="Enter username"
+            required
+        >
+
+
+
+        <label for="loginPassword">
+            Password
+        </label>
+
+        <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter password"
+            required
+        >
+
+
+
+        <button type="submit">
+            Login
+        </button>
+
+
+    </form>
+
+
+    <p style="text-align:center; margin-top:20px;">
+
+        Don't have an account?
+
+        <a href="signup.html">
+            Sign Up
+        </a>
+
+    </p>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

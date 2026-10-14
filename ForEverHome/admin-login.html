@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login - FurEver Home</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>🐾 FurEver Home</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">User Login</a>
+    </nav>
+
+</header>
+
+
+<div class="form-container">
+
+    <h2>👨‍💼 Admin Login</h2>
+
+    <form onsubmit="adminLogin(event)">
+
+        <label for="adminUsername">
+            Username
+        </label>
+
+        <input
+            type="text"
+            id="adminUsername"
+            placeholder="Enter admin username"
+            required
+        >
+
+
+        <label for="adminPassword">
+            Password
+        </label>
+
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Enter admin password"
+            required
+        >
+
+
+        <button type="submit">
+            Login as Admin
+        </button>
+
+    </form>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

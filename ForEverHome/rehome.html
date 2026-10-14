@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rehome a Pet - FurEver Home</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>🐾 FurEver Home</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pets.html">Adopt</a>
+        <a href="rehome.html">Rehome</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+</header>
+
+
+<div class="form-container">
+
+    <h2>🏠 Rehome a Pet</h2>
+
+    <p style="text-align: center; margin-bottom: 20px;">
+        Help your pet find a safe and loving new home.
+    </p>
+
+    <form onsubmit="submitRehome(event)">
+
+        <label for="petName">Pet Name</label>
+
+        <input
+            type="text"
+            id="petName"
+            placeholder="Enter pet name"
+            required
+        >
+
+
+        <label for="petType">Pet Type</label>
+
+        <select id="petType" required>
+
+            <option value="">Select pet type</option>
+
+            <option value="Dog">Dog</option>
+
+            <option value="Cat">Cat</option>
+
+            <option value="Other">Other</option>
+
+        </select>
+
+
+        <label for="breed">Breed</label>
+
+        <input
+            type="text"
+            id="breed"
+            placeholder="Enter breed"
+            required
+        >
+
+
+        <label for="age">Age</label>
+
+        <input
+            type="text"
+            id="age"
+            placeholder="Example: 2 years old"
+            required
+        >
+
+
+        <label for="gender">Gender</label>
+
+        <select id="gender" required>
+
+            <option value="">Select gender</option>
+
+            <option value="Male">Male</option>
+
+            <option value="Female">Female</option>
+
+        </select>
+
+
+        <label for="location">Location</label>
+
+        <input
+            type="text"
+            id="location"
+            placeholder="Enter location"
+            required
+        >
+
+
+        <label for="reason">Reason for Rehoming</label>
+
+        <textarea
+            id="reason"
+            placeholder="Why does this pet need a new home?"
+            required
+        ></textarea>
+
+
+        <label for="description">Pet Description</label>
+
+        <textarea
+            id="description"
+            placeholder="Tell us about the pet..."
+            required
+        ></textarea>
+
+
+        <label for="photo">Pet Photo</label>
+
+        <input
+            type="file"
+            id="photo"
+            accept="image/*"
+        >
+
+
+        <button type="submit">
+            Submit Rehoming Request
+        </button>
+
+    </form>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
